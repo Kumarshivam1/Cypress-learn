@@ -8,11 +8,12 @@ describe("Handle Dropdowns",()=>{
     })
 
     //it.skip("Skip This Block",()=>{})
+
     it.skip("DropDown without Select",()=>{
         cy.visit("https://www.dummyticket.com/dummy-ticket-for-visa-application/")
         cy.get("#select2-billing_country-container").click()
-        //On clicking we get input box and we type value and enter 
-        //,after do this the input box will be gone
+        //On clicking we get input box and we type value and enter
+        //after do this the input box will be gone
         cy.get("input[role='combobox']").type("Iceland").type('{enter}')
         //The val will be stored here, we can't use have.value(used when we have select tag)
         cy.get("#select2-billing_country-container").should("have.text","Iceland")
@@ -61,6 +62,5 @@ describe("Handle Dropdowns",()=>{
         })
         cy.get("#APjFqb").contains("csk vs rcb")
            
-        
     })
 })
