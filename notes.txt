@@ -1,0 +1,29 @@
++ x.text - . Used to retrieve text content of an element
+           . You would use x.text when you want to verify or interact with the visible text within an element, such as a <div>, <span>, or any other element that displays text content
+
++ have.value - have.value when you need to assert or interact with values in form fields such as <input>, <textarea>, or <select>
++ example- for li we use .text rather than have.value because it doesnt have value attribute
+
++ cy.wrap(x) - this is done so that we can chain a non-cypress element with cypress methods
++ npm install --save-dev @4tw/cypress-drag-drop - require(@4tw/cypress-drag-drop)
++ npm install --save-dev cypress-file-upload
++ npm install -D cypress-iframe  - import 'cypress-iframe'
++ npx cypress run --spec cypress/e2e/DropDown.cy.js - to run a specific test spec
++ npx cypress open - to open cypress in browser
+
++ HOOKS:-
+    .before - run once
+    .after - run once
+    .beforeEach - runs before every it block
+    .afterEach - run after every it block
+
++ TAGS:-
+    .it.skip
+    .it.only
+
++ TO GET VALUE -  .then((data)=>{}) - to get data
++ LOOP -  .each(($el,index,$elements)=>{
+       cy.wrap($el).click() - do any kind of cypress chainning after wrapping
+  })
+
++ Fixture has data which we want to use in our TestSuites
